@@ -31,6 +31,9 @@ function GameOne() {
       } else if (temporizer  === 0 ) {
         setRunning(false)
         window.alert(`você teve ${contador} acertos`)
+
+
+        
       }
     }, 1000)
   },[running, temporizer])

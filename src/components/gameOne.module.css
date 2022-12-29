@@ -1,0 +1,77 @@
+body {
+  height: 100vh;  
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: black;
+  position: absolute;
+}
+
+.headertemporizador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.temporizador {
+  font-size: 1em;
+  background-color:rgba(128, 128, 128, 0.671);
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  color: black;
+  
+}
+
+.buttons_area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.divteste {
+  background-color: red;
+}
+
+.initialtemp {
+  margin-left: 500px;
+}
+
+.divprincipal {
+  background-color: rgba(128, 128, 128, 0.671);
+  height: 300px;
+  width: 500px;
+  border-radius: 10px; 
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tittle {
+  background-color: black;
+  height: 50px;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  color: white;
+}
+
+.pcontainer {
+  display: flex;
+  text-align: center;
+margin-top: 50px;
+
+}
+
+.buttondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}

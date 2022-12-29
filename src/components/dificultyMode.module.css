@@ -1,0 +1,13 @@
+.pic {
+  width: 160px;
+}
+
+.div_img {
+  display: flex;
+  justify-content: center;
+}
+
+.card_area {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,12 @@
+.imgcontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  margin-bottom: 50px;
+}
+

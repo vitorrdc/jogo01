@@ -16,15 +16,15 @@ function DificultyMode() {
           <img  alt="Sample" src={facil}/>
             <CardBody>
               <CardTitle tag="h5">
-                Intermediário
+                Fácil
               </CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
                 Pra quem já conhece...
               </CardSubtitle>
               <CardText>
-                Se o modo anterior ficou "fácil", vem se testar nesse. Está no caminho certo!
+                Pra você que está começando, este é o modo indicado, vai por mim!
               </CardText>
-              <Link to='/waitingpage'><Button color='success'>Jogar!</Button></Link>
+              <Link to='/game01'><Button color='success'>Jogar!</Button></Link>
             </CardBody>
         </Card>
         <Card style={{width: '18rem'}}>

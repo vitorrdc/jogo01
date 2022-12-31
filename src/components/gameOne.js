@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import style from '../components/gameOne.module.css'
 import {Button} from 'reactstrap'
+import {Link} from 'react-router-dom'
 
 function GameOne() {
   const [ball, setBall] = useState(gerarCoordenadas())
   const [running, setRunning] = useState(false);
   const [contador, setContador] = useState(0)
-  const [temporizer, setTemporizer] = useState(3)
+  const [temporizer, setTemporizer] = useState(10)
   const [initialTemporazer, setInitialTemporazer] = useState(5)
   const [runningInitialTemporazer, setRunningInitialTemporazer] = useState(false)
+  const [finishGame, setFinishGame] = useState(false)
+  const [restart, setRestart] = useState(false)
 
   function gerarCoordenadas() {
     const x = Math.round(Math.random() * 700)
@@ -23,6 +26,14 @@ function GameOne() {
     setContador(contador + 1)
   }
 
+  function restartGame() {
+    setRestart(true)
+    setFinishGame(!finishGame)
+    setInitialTemporazer(5)
+    setTemporizer(10)
+    setContador(0)
+  }
+
   useEffect(() => { 
     if(!running) return
      setTimeout(() => {
@@ -30,30 +41,57 @@ function GameOne() {
       setTemporizer((oldValue) => oldValue - 1)
       } else if (temporizer  === 0 ) {
         setRunning(false)
-        window.alert(`você teve ${contador} acertos`)
-
-
-        
+        setFinishGame(true)
       }
     }, 1000)
   },[running, temporizer])
 
-  console.log(contador)
 
   useEffect(() => {
     setTimeout(() => {
-      if (runningInitialTemporazer && initialTemporazer > 0) {
+      if (runningInitialTemporazer && initialTemporazer > 1) {
         setInitialTemporazer((oldValue) => oldValue - 1)
-      } else if (initialTemporazer === 0){
+      } else if (initialTemporazer === 1){
         setRunning(true)
         setRunningInitialTemporazer(false)
       }
     },1000)
   },[initialTemporazer, runningInitialTemporazer])
 
+  useEffect(() => {
+    if(restartGame(true)) {
+    setRunning(!running)
+    setRunningInitialTemporazer(!runningInitialTemporazer)
+    setFinishGame(!finishGame)
+    }
+  }, [restart])
+
   return (
     <div>
-    {!running && !runningInitialTemporazer &&(
+    {finishGame && (
+      <>
+      <div className={style.headertemporizador}>
+      <div>
+      <div className={style.container}>
+      <div className={style.divprincipal}>
+        <div className={style.tittle}>
+        <h3>FIM DE JOGO!</h3>
+        </div>
+        <div className={style.pcontainer}>
+          <p>Você teve um total de {contador} acertos!</p>
+        </div>
+        <div className={style.buttondiv}>
+          <Button onClick={restartGame} color='primary'>Reiniciar</Button> 
+          <Link to='/dificultymode'>
+            <Button onClick={restartGame} color='primary'>Escolher dificuldade</Button> 
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>      </div>
+    </>
+    )} 
+    {!running && !runningInitialTemporazer && !finishGame &&(
       <div>
         <div className={style.container}>
         <div className={style.divprincipal}>
@@ -72,8 +110,8 @@ function GameOne() {
     )}
     {runningInitialTemporazer && (
       <>
-      <div className={style.headertemporizador}>
-        <div>{initialTemporazer}</div>
+      <div className={style.initialtemporazer}>
+        <h1>{initialTemporazer}</h1>
       </div>
     </>
     )} 
@@ -87,6 +125,7 @@ function GameOne() {
       </div>
     </>
     )} 
+    
     </div>
   );
 }

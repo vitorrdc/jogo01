@@ -3,10 +3,10 @@ body {
 }
 
 .ball {
-  width: 100px;
-  height: 100px;
-  border-radius: 80px;
-  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: rgb(0, 0, 0);
   position: absolute;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 .tittle {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.541);
   height: 50px;
   border-radius: 10px 10px 0px 0px;
   text-align: center;
@@ -78,13 +78,15 @@ body {
 .pcontainer {
   display: flex;
   text-align: center;
-margin-top: 50px;
+  margin-top: 50px;
+  justify-content: center;
 
 }
 
 .buttondiv {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 60px;
+justify-content: space-around; 
+ margin-top: 60px;
+
 }

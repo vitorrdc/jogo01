@@ -11,3 +11,18 @@
   display: flex;
   justify-content: space-between;
 }
+
+.imgdificil {
+  width: 30px;
+  margin-left: 130px;
+  margin-top: 100px;
+  
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.button {
+  margin-top: 10px;
+}

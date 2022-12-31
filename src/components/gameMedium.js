@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import style from '../components/gameOne.module.css'
+import style from '../components/gameMedium.module.css'
 import {Button} from 'reactstrap'
 import {Link} from 'react-router-dom'
 
-function GameOne() {
+function GameEasy() {
   const [ball, setBall] = useState(gerarCoordenadas())
   const [running, setRunning] = useState(false);
   const [contador, setContador] = useState(0)
@@ -14,7 +14,7 @@ function GameOne() {
   const [restart, setRestart] = useState(false)
 
   function gerarCoordenadas() {
-    const x = Math.round(Math.random() * 700)
+    const x = Math.round(Math.random() * 1100)
     const y = Math.round(Math.random() *600)
     return {
       x,y
@@ -99,10 +99,10 @@ function GameOne() {
           <h3>Vai começar...</h3>
           </div>
           <div className={style.pcontainer}>
-            <p>Após clicar em "iniciar" irá começar uma contagem regressiva e estará valendo!</p>
+            <p>Após clicar em "Iniciar" irá começar uma contagem regressiva e estará valendo!</p>
           </div>
           <div className={style.buttondiv}>
-            <Button onClick={() => setRunningInitialTemporazer(true)} color='primary'>Iniciar!</Button> 
+            <Button onClick={() => setRunningInitialTemporazer(true)} color='success'>Iniciar!</Button> 
           </div>
         </div>
       </div>
@@ -130,4 +130,4 @@ function GameOne() {
   );
 }
 
-export default GameOne;
+export default GameEasy;

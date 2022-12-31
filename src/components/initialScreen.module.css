@@ -1,12 +1,57 @@
 .imgcontainer {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
   flex-direction: column;
   align-items: center;
+  max-height: 500px;
 }
 
-img {
+.imgbeggin {
   margin-bottom: 50px;
+  animation: alvo 5s infinite;
 }
 
+@keyframes alvo {
+
+  0% {
+    width: 100px;
+    margin-left: 0;
+  }
+
+  10% {
+    width: 180px;
+    margin-left: 30%;
+  }
+
+  27%{
+    width: 250px;
+    margin-left: -30%;
+  }
+
+  50% {
+    width: 330px;
+    margin-left: -70%;
+  }
+
+  70% {
+    width: 150px;
+    margin-top: 20%;
+  }
+
+  85% {
+    width: 250px;
+    margin-left: 10%;
+  }
+  
+  100% {
+    width: 100px;
+    margin-left: 0%;
+  }
+  
+}
+
+.button {
+  position: fixed;  
+bottom: 30px;
+left: 47%;
+}

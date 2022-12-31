@@ -23,14 +23,12 @@ function InitialScreen() {
   };
 
   return (
-    <div className='container bg-light'>
+    <div>
+    <div className='container'>
       <h1 className='text-center'>Bem-vindo(a) ao ShotGame!</h1>
       <div className={style.imgcontainer}>
-        <img width={400} src={alvopic} alt="foto_alvo" />
+        <img className={style.imgbeggin} width='400px' src={alvopic} alt="foto_alvo" />
         <div>
-      <Button color="primary" onClick={toggle}>
-        Avançar
-      </Button>
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Sobre o ShotGame:</ModalHeader>
         <ModalBody>
@@ -72,6 +70,10 @@ function InitialScreen() {
       </Modal>
     </div>
       </div>
+    </div>
+      <Button className={style.button} color="primary" onClick={toggle}>
+        Avançar
+      </Button>
     </div>
   )
 }

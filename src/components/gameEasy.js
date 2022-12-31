@@ -7,7 +7,7 @@ function GameEasy() {
   const [ball, setBall] = useState(gerarCoordenadas())
   const [running, setRunning] = useState(false);
   const [contador, setContador] = useState(0)
-  const [temporizer, setTemporizer] = useState(10)
+  const [temporizer, setTemporizer] = useState(30)
   const [initialTemporazer, setInitialTemporazer] = useState(5)
   const [runningInitialTemporazer, setRunningInitialTemporazer] = useState(false)
   const [finishGame, setFinishGame] = useState(false)
@@ -30,7 +30,7 @@ function GameEasy() {
     setRestart(true)
     setFinishGame(!finishGame)
     setInitialTemporazer(5)
-    setTemporizer(10)
+    setTemporizer(30)
     setContador(0)
   }
 

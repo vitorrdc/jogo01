@@ -27,6 +27,20 @@ body {
   font-size: 8em;
 }
 
+.initialtemporazer h1 {
+animation: timer 1s 5;
+
+}
+
+@keyframes timer {
+  0% {
+    font-size: 0em;
+  }  
+  100% {
+    font-size: 12em;
+  }
+}
+
 
 .temporizador {
   font-size: 1em;

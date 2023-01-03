@@ -1,8 +1,7 @@
 import style from './dificultyMode.module.css'
 import {Button} from 'reactstrap'
-import {Link, useNavigation} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import DificultyCard from './dificultyCard'
-import { useState } from 'react'
 
 function DificultyMode() {
   

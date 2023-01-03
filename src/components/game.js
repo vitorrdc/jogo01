@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import style from '../components/gameEasy.module.css'
+import style from '../components/game.module.css'
 import {Button} from 'reactstrap'
 import {Link, useParams} from 'react-router-dom'
 
-function GameEasy() {
+function Game() {
   const [ball, setBall] = useState(gerarCoordenadas())
   const [running, setRunning] = useState(false);
   const [contador, setContador] = useState(0)
@@ -133,4 +133,4 @@ function GameEasy() {
   );
 }
 
-export default GameEasy;
+export default Game;

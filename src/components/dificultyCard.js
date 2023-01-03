@@ -1,13 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap'
-import style from '../components/dificultyCard.module.css'
 
 
 function DificultyCard({dificulty, levelText, startPracticeText, describeText, classNameDiv, classNameCircle}) {
   const navigate = useNavigate()
 
   function handleSelectDificulty() {
-    navigate(`/gameeasy/${dificulty}`)
+    navigate(`/game/${dificulty}`)
   }
   return (
     <Card style={{width: '18rem'}}>

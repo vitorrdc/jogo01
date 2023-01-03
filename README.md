@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Shot Game!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <img alt="Daily Diet" title="Daily Diet" src="./assets/banner.png" />
+</h1>
 
-## Available Scripts
+> Projeto desenvolvido à caráter de estudo, utilizando ReactJS e Bootstrap.
+Se trata de um jogo que tem por objetivo acertar o máximo de "bolinhas" (alvos) com o cursor do mouse, dentro de um tempo de 30s. Possui três níveis de dificuldade, sendo diferenciados entre si pelo tamanho do alvo. 
+Ótimo para praticar seu reflexo, precisão de clicks e para quem curte jogos de tiro FPS. 
 
-In the project directory, you can run:
+### 🚧 Ajustes e melhorias
 
-### `npm start`
+Próximas atualizações serão voltadas nas seguintes tarefas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [ ] Login social
+- [ ] Registro de pontuações em forma de Ranking
+- [ ] Salvamento de dados em backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 Pré-requisitos
 
-### `npm test`
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+* Você tem uma máquina `<Windows / Linux / Mac>`.
+* Você tem o [git](https://git-scm.com) instalado na sua máquina.
+* Você tem o [node](https://nodejs.org/en/) instalado na sua máquina.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Instalando Shot Game
 
-### `npm run build`
+Para instalar o Shot Game, siga estas etapas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash:
+```
+# Clone este repositório
+$ git clone <https://github.com/vitorrdc/jogo01>
+# Acesse a pasta do projeto no terminal/cmd
+$ cd jogo01
+# Instale as dependências
+$ npm install ou yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ☕ Usando Shot Game
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para usar Shot Game, siga estas etapas:
 
-### `npm run eject`
+bash:
+```
+# Acesse a pasta do projeto no terminal/cmd
+$ cd jogo01
+# Execute a aplicação em modo de desenvolvimento
+$ npm start ou yarn start
+# O servidor inciará na porta:3000
+# Agora é só acessar o endereço http://localhost:3000 no Browser de sua preferência
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛠 Tecnologias
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As seguintes ferramentas foram usadas na construção do projeto:
+- [React](https://reactjs.org/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [React Router Dom](https://reactrouter.com/en/main)
+- [Bootstrap](https://getbootstrap.com/)
+- [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 👨🏾‍💻 Autor
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ <img style="border-radius: 50%;" src="https://github.com/vitorrdc.png" width="100px;" alt=""/>
 
-## Learn More
+Feito com ❤️ por Vitor Ribeiro 👋🏽 Entre em contato!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Gmail Badge](https://img.shields.io/badge/-vitor.camposrdc@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:vitor.camposrdc@gmail.com)](mailto:vitor.camposrdc@gmail.com)

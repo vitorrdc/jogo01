@@ -1,7 +1,7 @@
 # Shot Game!
 
 <h1 align="center">
-  <img alt="Shot Game" title="Shot Game" src="./images/banner.png" />
+  <img alt="Shot Game" title="Shot Game" src="./src/images/banner.png" />
 </h1>
 
 > Projeto desenvolvido à caráter de estudo, utilizando ReactJS e Bootstrap.

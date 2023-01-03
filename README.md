@@ -1,7 +1,7 @@
 # Shot Game!
 
 <h1 align="center">
-  <img alt="Daily Diet" title="Daily Diet" src="./assets/banner.png" />
+  <img alt="Shot Game" title="Shot Game" src="./assets/banner.png" />
 </h1>
 
 > Projeto desenvolvido à caráter de estudo, utilizando ReactJS e Bootstrap.

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import style from '../components/gameEasy.module.css'
 import {Button} from 'reactstrap'
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 
 function GameEasy() {
   const [ball, setBall] = useState(gerarCoordenadas())
@@ -12,6 +12,8 @@ function GameEasy() {
   const [runningInitialTemporazer, setRunningInitialTemporazer] = useState(false)
   const [finishGame, setFinishGame] = useState(false)
   const [restart, setRestart] = useState(false)
+  const {id} = useParams()
+  console.log(id)
 
   function gerarCoordenadas() {
     const x = Math.round(Math.random() * 1100)
@@ -88,8 +90,9 @@ function GameEasy() {
         </div>
       </div>
     </div>
-  </div>      </div>
-    </>
+  </div>      
+  </div>
+      </>
     )} 
     {!running && !runningInitialTemporazer && !finishGame &&(
       <div>
@@ -121,7 +124,7 @@ function GameEasy() {
         <div className={style.temporizador}>
           <h1>{temporizer}</h1>
         </div>
-        <div onClick={onClickBall} className={style.ball} style={{left: ball.x, top: ball.y}}></div>
+        <div onClick={onClickBall} className={style[id]} style={{left: ball.x, top: ball.y}}></div>
       </div>
     </>
     )} 

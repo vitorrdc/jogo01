@@ -12,17 +12,38 @@
   justify-content: space-between;
 }
 
-.imgdificil {
-  width: 30px;
-  margin-left: 130px;
-  margin-top: 100px;
-  
-}
-
 h1 {
   margin-bottom: 50px;
 }
 
 .button {
   margin-top: 10px;
+}
+
+.divCircle {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleEasy {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  border-radius: 80px;
+}
+
+.circleMedium {
+  background-color: black;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+
+.circleHard {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
 }

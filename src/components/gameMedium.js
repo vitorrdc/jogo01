@@ -88,7 +88,8 @@ function GameEasy() {
         </div>
       </div>
     </div>
-  </div>      </div>
+  </div>      
+  </div>
     </>
     )} 
     {!running && !runningInitialTemporazer && !finishGame &&(

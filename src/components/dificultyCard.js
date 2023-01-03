@@ -1,23 +1,30 @@
+import { useNavigate } from 'react-router-dom'
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap'
-import {Link} from 'react-router-dom'
+import style from '../components/dificultyCard.module.css'
 
-function DificultyCard({style, alt, src, tag, className, tagtwo, to, color, }) {
-  <Card style={{style}}>
-          <img  alt={alt} src={src}/>
+
+function DificultyCard({dificulty, levelText, startPracticeText, describeText, classNameDiv, classNameCircle}) {
+  const navigate = useNavigate()
+
+  function handleSelectDificulty() {
+    navigate(`/gameeasy/${dificulty}`)
+  }
+  return (
+    <Card style={{width: '18rem'}}>
+          <div className={classNameDiv}><div className={classNameCircle}/></div>
             <CardBody>
-              <CardTitle tag={tag}>
-                Iniciante
+              <CardTitle tag="h5">
+                {levelText}
               </CardTitle>
-              <CardSubtitle className={className} tag={tagtwo}>
-                Para aprender
+              <CardSubtitle className="mb-2 text-muted" tag="h6">
+                {startPracticeText}
               </CardSubtitle>
               <CardText>
-                Essa é a melhor pra você que está começando, vai por mim! A "bolinha" tem um tamanho maior, o que facilita o acerto.
+                {describeText}
               </CardText>
-                <Link to={to}>
-                  <Button color={color}>Jogar!</Button>
-               </Link>
+                <Button onClick={handleSelectDificulty} color='success'>Jogar</Button>
             </CardBody>
         </Card>
-} 
+  )
+}
 export default DificultyCard;

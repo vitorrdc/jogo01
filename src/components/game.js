@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import style from '../components/game.module.css'
 import {Button} from 'reactstrap'
 import {Link, useParams} from 'react-router-dom'
+import { useTheme } from "./themeContext";
 
 function Game() {
   const [ball, setBall] = useState(gerarCoordenadas())
@@ -13,7 +14,7 @@ function Game() {
   const [finishGame, setFinishGame] = useState(false)
   const [restart, setRestart] = useState(false)
   const {id} = useParams()
-  console.log(id)
+  
 
   function gerarCoordenadas() {
     const x = Math.round(Math.random() * 1100)
@@ -68,6 +69,76 @@ function Game() {
     }
   }, [restart])
 
+
+
+  const theme = useTheme()
+  if (theme.theme === 'dark') {
+    return (
+      <div className={style.container_dark}>
+    {finishGame && (
+      <>
+      <div className={style.headertemporizador}>
+      <div>
+      <div className={style.container}>
+      <div className={style.divprincipal}>
+        <div className={style.tittle}>
+        <h3>FIM DE JOGO!</h3>
+        </div>
+        <div className={style.pcontainer}>
+          <p>Você teve um total de {contador} acertos!</p>
+        </div>
+        <div className={style.buttondiv}>
+          <Button onClick={restartGame} color='primary'>Reiniciar</Button> 
+          <Link to='/dificultymode'>
+            <Button onClick={restartGame} color='primary'>Escolher dificuldade</Button> 
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>      
+  </div>
+      </>
+    )} 
+    {!running && !runningInitialTemporazer && !finishGame &&(
+      <div>
+        <div className={style.container}>
+        <div className={style.divprincipal}>
+          <div className={style.tittle}>
+          <h3>Vai começar...</h3>
+          </div>
+          <div className={style.pcontainer_dark}>
+            <p>Após clicar em "Iniciar" irá começar uma contagem regressiva e estará valendo!</p>
+          </div>
+          <div className={style.buttondiv}>
+            <Button onClick={() => setRunningInitialTemporazer(true)} color='success'>Iniciar!</Button> 
+          </div>
+        </div>
+      </div>
+    </div>
+    )}
+    {runningInitialTemporazer && (
+      <>
+      <div className={style.initialtemporazer}>
+        <h1>{initialTemporazer}</h1>
+      </div>
+    </>
+    )} 
+    {running && (
+      <>
+      <div className={style.headertemporizador}>
+        <div className={style.temporizador}>
+          <h1>{temporizer}</h1>
+        </div>
+        <div onClick={onClickBall} className={style[id]} style={{left: ball.x, top: ball.y}}></div>
+      </div>
+    </>
+    )} 
+    
+    </div>
+    )
+  }
+  
+
   return (
     <div>
     {finishGame && (
@@ -99,7 +170,7 @@ function Game() {
         <div className={style.container}>
         <div className={style.divprincipal}>
           <div className={style.tittle}>
-          <h3>Vai começar...</h3>
+          <h3>Vai começar...{JSON.stringify(theme)}</h3>
           </div>
           <div className={style.pcontainer}>
             <p>Após clicar em "Iniciar" irá começar uma contagem regressiva e estará valendo!</p>

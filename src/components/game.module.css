@@ -2,12 +2,23 @@ body {
   height: 100vh;  
   cursor: crosshair;
 }
+.container_dark {
+  background-color: black;
+  height: 100vh;
+}
 
 .easy {
   width: 100px;
   height: 100px;
   border-radius: 80px;
   background-color: rgb(0, 0, 0);
+  position: absolute;
+}
+.easy_dark {
+  width: 100px;
+  height: 100px;
+  border-radius: 80px;
+  background-color: white;
   position: absolute;
 }
 
@@ -18,12 +29,26 @@ body {
   background-color: rgb(0, 0, 0);
   position: absolute;
 }
+.medium_dark {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: white;
+  position: absolute;
+}
 
 .hard {
   width: 20px;
   height: 20px;
   border-radius: 30px;
   background-color: rgb(0, 0, 0);
+  position: absolute;
+}
+.hard_dark {
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: white;
   position: absolute;
 }
 
@@ -106,12 +131,19 @@ animation: timer 1s 5;
   color: white;
 }
 
+
 .pcontainer {
   display: flex;
   text-align: center;
   margin-top: 50px;
   justify-content: center;
-
+}
+.pcontainer_dark {
+  display: flex;
+  text-align: center;
+  margin-top: 50px;
+  justify-content: center;
+  color: white;
 }
 
 .buttondiv {

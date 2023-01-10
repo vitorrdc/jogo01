@@ -4,7 +4,7 @@
 
 .div_img {
   display: flex;
-  justify-content: center;
+  justify-content: center
 }
 
 .card_area {
@@ -25,10 +25,25 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
+}
+.divCircle_Dark {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(17, 15, 15);
 }
 
 .circleEasy {
   background-color: black;
+  width: 100px;
+  height: 100px;
+  border-radius: 80px;
+}
+
+.circleEasy_Dark {
+  background-color: white;
   width: 100px;
   height: 100px;
   border-radius: 80px;
@@ -41,9 +56,47 @@ h1 {
   border-radius: 30px;
 }
 
+.circleMedium_Dark {
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+
 .circleHard {
   background-color: black;
   width: 20px;
   height: 20px;
   border-radius: 30px;
 }
+.circleHard_Dark {
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+}
+
+.themeMode {
+  margin-top: 10px;
+}
+
+
+.switcher {
+  display: flex;
+  flex-direction: row;
+  margin-left: 880px;
+  margin-top: -40px;
+  justify-content: center;
+  width: 300px;
+}
+
+.switcher button {
+  margin-left: 10px;
+  height: 30px;
+}
+
+.switcher h6 {
+  margin-top: 15px;
+}
+
+

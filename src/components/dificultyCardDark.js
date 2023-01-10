@@ -6,7 +6,7 @@ function DificultyCard({dificulty, levelText, startPracticeText, describeText, c
   const navigate = useNavigate()
 
   function handleSelectDificulty() {
-    navigate(`/game/${dificulty}`)
+    navigate(`/game/${dificulty}_dark`)
   }
   return (
     <Card style={{width: '18rem'}} color='dark' inverse='true'>

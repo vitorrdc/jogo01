@@ -2,10 +2,6 @@
   width: 160px;
 }
 
-.div_img {
-  display: flex;
-  justify-content: center;
-}
 
 .card_area {
   display: flex;
@@ -25,4 +21,8 @@ h1 {
 
 .button {
   margin-top: 10px;
+}
+
+.themeMode {
+  background-color: red;
 }

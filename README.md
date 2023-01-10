@@ -12,6 +12,7 @@ Se trata de um jogo que tem por objetivo acertar o máximo de "bolinhas" (alvos)
 
 Próximas atualizações serão voltadas nas seguintes tarefas:
 
+- [x] Gerenciamento de Temas - Context
 - [ ] Login social
 - [ ] Registro de pontuações em forma de Ranking
 - [ ] Salvamento de dados em backend
